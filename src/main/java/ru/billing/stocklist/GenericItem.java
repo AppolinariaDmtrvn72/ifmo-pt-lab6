@@ -1,5 +1,7 @@
 package ru.billing.stocklist;
 
+import java.util.Objects;
+
 /**
  * GenericItem
  */
@@ -102,6 +104,11 @@ public class GenericItem {
             return false;
         }
 
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.ID, this.name, this.price, this.category);
     }
 
     @Override
